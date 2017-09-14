@@ -349,12 +349,20 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
 
 
+for (var i = 1; i<6; i++){
+	console.log("Player: " + i);
+
+}
+
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
-  var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+  var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
+for (var i = 0; i<myFavFoods.length; i++){
+	console.log(myFavFoods[i]);
+}
 
 /*
  * #17
@@ -371,8 +379,15 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log your result.
 */
 
-
-
+var numArray = [0,2,4,6,8];
+var total = 0;
+function sumItUp(arr){
+	for(var i = 0; i<numArray.length; i++){
+		total +=numArray[i];
+	}
+	return total;
+}
+console.log(sumItUp(total));
 /*
  * #18
  * Function - allStars
@@ -384,8 +399,18 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through the players array and will put all the even number indexed players in the `east` array and the rest in the `west` array.
  * Console.log both the east and west arrays.
 */ 
-
+var east = [];
+var west = [];
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+
+function allStars(ballers){
+	for (var i = 0; i<players.length; i++){
+		if((i % 2) === 0)) 
+		
+		}
+	}
+}
+
 /*
  * #19
  * Function - subways
