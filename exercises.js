@@ -93,15 +93,15 @@ console.log(isGreaterTan(1,100));
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
+
 function mustBeTrue(boo){
-	if(true === true){
+	if(boo === true){
 		return true;
 	}else{
 		return false;
 	}
 }
 console.log(mustBeTrue(true));
-
 
 /*
  * #5
@@ -115,13 +115,13 @@ console.log(mustBeTrue(true));
  * Console.log your result.
 */
 function bigBird(word){
-	if(word = word.length[3]){
+	if(word.length === 3){
 		return "Word to Big Bird!";
 	}else{
 		return "not a three letter word"
 	}
 }
-console.log(bigBird("fuck"));
+console.log("big bird",bigBird("fuck"));
 
 /*
  * #6
@@ -135,6 +135,7 @@ console.log(bigBird("fuck"));
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
+
 function isEqual(first,second){
 	if(first === second){
 		return "You look mahvelous!";
@@ -156,6 +157,7 @@ console.log(isEqual("string","string"));
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
+
 function notEqual(first,second){
 	if(first !== second){
 		return "Opposites do attract";
@@ -164,7 +166,6 @@ function notEqual(first,second){
 	}
 }
 console.log(notEqual("meow","meoooow"));
-
 
 /*
  * #8
@@ -177,6 +178,7 @@ console.log(notEqual("meow","meoooow"));
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
+
 function spareChange(money){
 	if(money > 100){
 		return true;
@@ -184,8 +186,7 @@ function spareChange(money){
 		return false;
 	}
 }
-console.log(spareChange(99));
-
+console.log("9",spareChange(101));
 
 /*
  * #9
@@ -200,6 +201,7 @@ console.log(spareChange(99));
  * The function will return true if the sum of all the number values is greater than 30, otherwise it will return false.
  * Console.log your result.
 */ 
+
 function dirty30(one,two,three){
 	if((one+two+three) > 30){
 		return true;
@@ -252,7 +254,6 @@ function daClub(cover,age){
 }
 console.log(daClub(21,30));
 
-
 /*
  * #12
  * Function - graduation
@@ -265,14 +266,16 @@ console.log(daClub(21,30));
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
+
 function graduation(credit,thesis){
-	if(credit === 120 || thesis === true){
+	if(credit >= 120 || thesis === true){
 		return "Congratulations on a job well done";
 	}else{
 		return "See you in summer school";
 	}
 }
-console.log(graduation(100,false));
+console.log("graduation",graduation(120,false));
+
 
 /*
  * #13
@@ -285,6 +288,7 @@ console.log(graduation(100,false));
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
+
 function moneyTrain(speed){
 	if(speed < 50){
 		return "You are riding Honolulu's Rail";
@@ -311,15 +315,23 @@ console.log(moneyTrain(120));
  * Console.log budget and doughnutBought again.
 */ 
 
-var budget = 21;
+var budget = 40;
 var doughnutPrice = 5;
 var doughnutBought	= 0;
+
 function buyDoughnut(){
-	
+	if(budget >= doughnutPrice){
+		doughnutBought++;
+		budget -= doughnutPrice;
+	}
 }
+console.log(buyDoughnut(0));
 
 
-
+function buyDoughnut(){
+	return [(budget - doughnutPrice), (doughnutBought-1)];
+}
+console.log(buyDoughnut(0));
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -404,12 +416,22 @@ var west = [];
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
 
 function allStars(ballers){
-	for (var i = 0; i<players.length; i++){
-		if((i % 2) === 0)) 
-		
+	for(var i = 0; i < ballers.length; i++){
+		console.log(ballers[i]);
+		console.log(i);
+
+		if(i%2 === 0){
+			east.push(ballers[i]);
+		}else{
+			west.push(ballers[i]);
 		}
 	}
 }
+
+allStars(players);
+console.log(east);
+console.log(west);
+
 
 /*
  * #19
@@ -424,6 +446,19 @@ function allStars(ballers){
 */ 
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+function subways(special){
+	for(var i = 0; i < special.length; i++){
+
+		if(i%2 === 1){
+		console.log(i);
+			special.splice(i,1,"TUNA");
+			special[i]="TUNA";
+		}
+	}
+	return special;
+}
+subways(subOftheDay);
+console.log(subOftheDay);
 
 
 /*
